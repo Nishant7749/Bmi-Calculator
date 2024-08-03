@@ -17,7 +17,8 @@ public class bmi {
         double weight = sc.nextDouble();
 
         System.out.print("Height (cm) : ");
-        double height = sc.nextDouble();
+        double heightCM = sc.nextDouble();
+        double height = heightCM / 100.00;
 
         double bmi = calcbmi(weight, height);
 
@@ -26,8 +27,8 @@ public class bmi {
  }
 
  public static double calcbmi(double weight, double height) {
-    return weight / (height * height * 10000);
- }                                                                               //gives wrong bmi, bmi = 0.00
+    return weight / (height * height);
+ }                                                                            
 
  public static String bmicateg(double bmi) {
     if(bmi < 18.5) {  return "Underweight";}
